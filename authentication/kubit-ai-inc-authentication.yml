@@ -1,0 +1,70 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.kubit.ai/docs/mcp-server + https://mcp.kubit.ai/.well-known/oauth-authorization-server
+docs:
+  - https://docs.kubit.ai/docs/single-sign-on-sso
+  - https://docs.kubit.ai/docs/login-to-kubit
+  - https://docs.kubit.ai/docs/mcp-server
+summary: >-
+  Kubit has no public API-key surface. Programmatic access is the hosted MCP server,
+  which is protected by OAuth 2.1 authorization code with PKCE and supports dynamic
+  client registration. Human access to the Kubit web platform is SSO-first, with
+  invite-email plus password and MFA as the fallback.
+schemes:
+  - id: mcp_oauth2
+    type: oauth2
+    surface: https://mcp.kubit.ai/mcp
+    flows:
+      authorization_code:
+        authorization_url: https://mcp.kubit.ai/auth/oauth2/authorize
+        token_url: https://mcp.kubit.ai/auth/oauth2/token
+        refresh_supported: true
+        pkce_methods:
+          - S256
+        scopes:
+          - mcp:read
+          - mcp:write
+    dynamic_client_registration:
+      supported: true
+      registration_endpoint: https://mcp.kubit.ai/auth/oauth2/register
+    issuer: https://mcp.kubit.ai
+    response_types:
+      - code
+    grant_types:
+      - authorization_code
+      - refresh_token
+  - id: platform_sso
+    type: openIdConnect
+    surface: https://app.kubit.ai
+    description: >-
+      Single Sign-On for the Kubit web platform. Documented identity providers:
+      Google Workspace, Okta, Azure Microsoft Entra ID (Active Directory), and
+      AWS IAM Identity Center. SSO LDAP groups can be synced to Kubit groups.
+    providers:
+      - name: Google Workspace
+        docs: https://docs.kubit.ai/docs/google-workspace
+      - name: Okta
+        docs: https://docs.kubit.ai/docs/okta
+      - name: Azure Microsoft Entra ID
+        docs: https://docs.kubit.ai/docs/azure-active-directory-ad
+      - name: AWS IAM Identity Center
+        docs: https://docs.kubit.ai/docs/aws-iam-identity-center
+  - id: platform_password
+    type: http
+    scheme: basic-invite
+    description: >-
+      Fallback for organizations without SSO: an invite email issues a temporary
+      password; the user then sets a permanent password and enrolls in multi-factor
+      authentication.
+    mfa: true
+authorization:
+  model: rbac
+  docs: https://docs.kubit.ai/docs/kubit-user-roles-and-permissions
+  built_in_roles:
+    - Admin
+    - Governor
+    - Creator
+    - Viewer
+  notes: >-
+    Custom roles with granular permissions and schema-specific access are supported;
+    MCP tool calls are evaluated against the same role-based access controls.
