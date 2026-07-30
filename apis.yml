@@ -1,22 +1,75 @@
 aid: kubit-ai-inc
 name: Kubit AI, Inc.
-description: 'Kubit AI, Inc. is a company surfaced as a portfolio company of insight-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: devops. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Kubit is a warehouse-native digital analytics platform that runs product analytics
+  directly against a customer's cloud data warehouse with no ETL, and bridges that
+  behavioral data with LLM observability. Kubit maps clickstream behavior, intent, and
+  sentiment onto LLM traces so teams building AI agents can debug and optimize them
+  where they already work. Its semantic layer applies business definitions, data models,
+  and governance policies before any query reaches the warehouse. Kubit's programmatic
+  surface is a hosted Model Context Protocol server at mcp.kubit.ai, protected by OAuth
+  2.1 with PKCE, plus first-party OpenTelemetry exporters and a set of published agent
+  skills for Claude Code and Cursor. Kubit is backed by Insight Partners.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kubit.ai/wp-content/uploads/2024/04/cropped-Kubit-Social-Profile-Image-300x300.png
 url: https://raw.githubusercontent.com/api-evangelist/kubit-ai-inc/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - insight-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: mcp-server-and-agent-skills
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Analytics
+- Product Analytics
+- Data Warehouse
+- LLM Observability
+- Model Context Protocol
+- Agent Analytics
+- OpenTelemetry
 - Devops
-apis: []
+apis:
+- aid: kubit-ai-inc:mcp
+  name: Kubit MCP Server
+  description: >-
+    Kubit's hosted Model Context Protocol server. Exposes five tools — getUserContext,
+    getSchema, createReport, getRawData, and searchKubit — that let an MCP-compatible
+    IDE or assistant explore schemas, execute reports, retrieve raw data, and find
+    existing reports in the Kubit platform. Protected by OAuth 2.1 authorization code
+    with PKCE and dynamic client registration, scoped mcp:read and mcp:write, with
+    access enforced by Kubit's role-based access controls.
+  humanURL: https://docs.kubit.ai/docs/mcp-server
+  baseURL: https://mcp.kubit.ai/mcp
+  tags:
+  - Model Context Protocol
+  - Analytics
+  - Agent Analytics
+  properties:
+  - type: MCPServer
+    url: mcp/kubit-ai-inc-mcp.yml
+  - type: Documentation
+    url: https://docs.kubit.ai/docs/mcp-server
+  - type: SourceCode
+    url: https://github.com/Kubit-AI/mcp-server
+  - type: Authentication
+    url: authentication/kubit-ai-inc-authentication.yml
+  - type: OAuthScopes
+    url: scopes/kubit-ai-inc-scopes.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +78,68 @@ maintainers:
 common:
 - type: Website
   url: https://www.kubit.ai/
+- type: DeveloperPortal
+  url: https://docs.kubit.ai/docs/getting-started
+- type: Documentation
+  url: https://docs.kubit.ai/docs/getting-started
+- type: GettingStarted
+  url: https://docs.kubit.ai/docs/getting-started
+- type: HelpCenter
+  url: https://guide.kubit.ai/article/get-started-overview
+- type: Blog
+  url: https://kubit.ai/company/blog
+- type: GitHubOrganization
+  url: https://github.com/Kubit-AI
+- type: Pricing
+  url: https://kubit.ai/pricing
+- type: SignUp
+  url: https://agent.kubit.ai/
+- type: Login
+  url: https://app.kubit.ai/
+- type: TermsOfService
+  url: https://kubit.ai/terms-of-service/
+- type: PrivacyPolicy
+  url: https://kubit.ai/privacy-policy/
+- type: Support
+  url: https://kubit.ai/about/#contact-block
+- type: MCPServer
+  url: mcp/kubit-ai-inc-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Packages
+  url: packages/kubit-ai-inc-packages.yml
+- type: SDKs
+  url: packages/kubit-ai-inc-packages.yml
+- type: CLI
+  url: cli/kubit-ai-inc-cli.yml
+- type: Components
+  url: components/kubit-ai-inc-components.yml
+- type: Authentication
+  url: authentication/kubit-ai-inc-authentication.yml
+- type: OAuthScopes
+  url: scopes/kubit-ai-inc-scopes.yml
+- type: WellKnown
+  url: well-known/kubit-ai-inc-well-known.yml
+- type: LLMsTxt
+  url: llms/kubit-ai-inc-llms.txt
+- type: Conventions
+  url: conventions/kubit-ai-inc-conventions.yml
+- type: DataModel
+  url: data-model/kubit-ai-inc-data-model.yml
+- type: Conformance
+  url: conformance/kubit-ai-inc-conformance.yml
+- type: Compliance
+  url: https://kubit.ai/gdpr-compliance-policy/
+- type: TrustCenter
+  url: security/kubit-ai-inc-trust-center.yml
+- type: DomainSecurity
+  url: security/kubit-ai-inc-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/kubit-ai-inc-lifecycle.yml
+- type: ChangeLog
+  url: changelog/kubit-ai-inc-changelog.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
