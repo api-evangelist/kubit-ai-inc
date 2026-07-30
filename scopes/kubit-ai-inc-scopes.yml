@@ -1,0 +1,21 @@
+generated: '2026-07-19'
+method: searched
+source: https://mcp.kubit.ai/.well-known/oauth-authorization-server
+docs: https://docs.kubit.ai/docs/mcp-server
+authorization_server: https://mcp.kubit.ai
+protected_resource: https://mcp.kubit.ai/mcp
+notes: >-
+  Kubit's only documented OAuth surface is the hosted MCP server. The scopes below are
+  taken verbatim from the published RFC 8414 authorization-server metadata and the
+  RFC 9728 protected-resource metadata. Kubit's web platform authenticates with SSO
+  (SAML/OIDC via Google Workspace, Okta, Microsoft Entra ID, AWS IAM Identity Center)
+  and exposes no separate public scope registry.
+scopes:
+  - name: mcp:read
+    description: >-
+      Read access to Kubit analytics through the MCP server — user context, schema
+      metadata, existing report results and raw data exports, and search.
+  - name: mcp:write
+    description: >-
+      Write access through the MCP server — creating and executing new reports against
+      the connected warehouse.

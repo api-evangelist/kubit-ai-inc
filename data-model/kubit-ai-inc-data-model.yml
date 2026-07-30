@@ -1,0 +1,84 @@
+generated: '2026-07-19'
+method: derived
+source: https://docs.kubit.ai/llms.txt + https://docs.kubit.ai/docs/mcp-server
+notes: >-
+  Derived from Kubit's documented object vocabulary and the MCP tool contract, not from
+  an OpenAPI specification — Kubit publishes none. Relationships reflect how the
+  documentation and the MCP tools describe containment, not a wire schema.
+entities:
+  - name: Schema
+    description: >-
+      A warehouse-backed data model containing event definitions, properties, and
+      dimensions. Retrieved in full by the getSchema MCP tool.
+    docs: https://docs.kubit.ai/docs/mcp-server
+    relationships:
+      - has_many: Event
+      - has_many: Dimension
+  - name: Event
+    description: A tracked user behavior defined within a Schema.
+    relationships:
+      - belongs_to: Schema
+      - has_many: Property
+  - name: Property
+    description: An attribute carried by an Event.
+    relationships:
+      - belongs_to: Event
+  - name: Dimension
+    description: A grouping axis available for analysis within a Schema.
+    relationships:
+      - belongs_to: Schema
+  - name: VirtualEvent
+    description: >-
+      Multiple events combined, or custom filters applied, saved as a reusable event.
+    docs: https://docs.kubit.ai/docs/virtual-events
+    relationships:
+      - has_many: Event
+  - name: Measure
+    description: A saved reusable metric definition.
+    relationships:
+      - belongs_to: Schema
+  - name: Cohort
+    description: A saved audience definition used across reports.
+    relationships:
+      - belongs_to: Schema
+  - name: Report
+    description: >-
+      An analytical query and its result. Created and executed by createReport, which
+      returns a formulaTemplateId and an analysisId; raw output is exported by getRawData.
+    identifiers:
+      - formulaTemplateId
+      - analysisId
+    relationships:
+      - belongs_to: Schema
+      - has_many: Cohort
+      - has_many: VirtualEvent
+  - name: Dashboard
+    description: A collection of Reports, embeddable by URL and exportable to Drive/OneDrive.
+    docs: https://docs.kubit.ai/docs/embedding-kubit-urls
+    relationships:
+      - has_many: Report
+  - name: Incident
+    description: Contextual annotation placed alongside reports.
+    docs: https://docs.kubit.ai/docs/incidents
+    relationships:
+      - belongs_to: Report
+  - name: User
+    description: A member of the Kubit organization, authenticated by SSO or invite.
+    docs: https://docs.kubit.ai/docs/admin-panel-users
+    relationships:
+      - has_many: Group
+      - has_one: Role
+  - name: Group
+    description: >-
+      A collection of users used to assign role-based permissions at scale; syncable
+      with SSO LDAP groups.
+    docs: https://docs.kubit.ai/docs/admin-panel-groups
+    relationships:
+      - has_many: User
+  - name: Role
+    description: >-
+      A permission set. Built in: Admin, Governor, Creator, Viewer. Custom roles support
+      granular and schema-specific access.
+    docs: https://docs.kubit.ai/docs/kubit-user-roles-and-permissions
+    relationships:
+      - belongs_to: User

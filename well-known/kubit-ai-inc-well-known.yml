@@ -1,0 +1,60 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of the Kubit host surface
+notes: >-
+  Only mcp.kubit.ai serves real /.well-known documents — the OAuth 2.0 discovery pair
+  that fronts the hosted MCP server. app.kubit.ai and agent.kubit.ai return HTTP 200 for
+  every path because they are single-page applications with catch-all routing; their
+  responses are HTML, not discovery documents, and are recorded as such rather than saved.
+hosts:
+  - host: https://mcp.kubit.ai
+    documents:
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        content_type: application/json
+        file: kubit-ai-inc-oauth-authorization-server.json
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        content_type: application/json
+        file: kubit-ai-inc-oauth-protected-resource.json
+      - path: /.well-known/openid-configuration
+        status: 200
+        content_type: text/html
+        real_document: false
+        note: SPA catch-all returns HTML, not an OIDC discovery document
+      - path: /.well-known/security.txt
+        status: 200
+        content_type: text/html
+        real_document: false
+        note: SPA catch-all returns HTML, not RFC 9116 security.txt
+  - host: https://kubit.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://docs.kubit.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+  - host: https://app.kubit.ai
+    spa_catch_all: true
+    note: >-
+      Every probed path returned 200 with the HTML shell titled "Enter your organization ID".
+      No real discovery documents.
+  - host: https://agent.kubit.ai
+    spa_catch_all: true
+    note: >-
+      Every probed path returned 200 with an Amazon Cognito-backed HTML shell.
+      No real discovery documents.
+security_txt:
+  present: false
+  note: No RFC 9116 security.txt served on any Kubit host as of the probe date.

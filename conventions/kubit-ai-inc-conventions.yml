@@ -1,0 +1,54 @@
+generated: '2026-07-19'
+method: derived
+source: mcp/kubit-ai-inc-mcp.yml + authentication/kubit-ai-inc-authentication.yml + https://docs.kubit.ai
+summary: >-
+  Kubit exposes no public REST API, so the cross-cutting semantics below describe the
+  hosted MCP server and the platform behind it rather than an HTTP resource API.
+auth:
+  style: oauth2-bearer
+  detail: >-
+    OAuth 2.1 authorization code + PKCE (S256) against https://mcp.kubit.ai, with
+    dynamic client registration. Scopes mcp:read and mcp:write.
+  see: authentication/kubit-ai-inc-authentication.yml
+tenancy:
+  style: organization-prompt
+  detail: >-
+    The MCP client is prompted for an organization name at connect time; every tool
+    call is then evaluated against that org's role-based access controls.
+session:
+  style: context-first
+  detail: >-
+    getUserContext is documented as "always the first call" — it establishes user
+    context, available schemas, and the active schema selection that later tool calls
+    depend on. This is Kubit's ordering convention in place of a stateless REST contract.
+idempotency:
+  supported: false
+  detail: >-
+    No idempotency key, header, or replay-safety guarantee is documented for either the
+    MCP tools or the platform. createReport is a creating operation with no documented
+    deduplication.
+pagination:
+  style: none-documented
+  detail: >-
+    Result volume is bounded by report definition and by plan-level trace quotas rather
+    than by a documented cursor or offset scheme. getRawData returns CSV-like exports.
+versioning:
+  style: unversioned-endpoint
+  detail: The MCP endpoint carries no version segment; packages follow semver.
+  see: lifecycle/kubit-ai-inc-lifecycle.yml
+errors:
+  style: mcp-tool-errors
+  detail: >-
+    Errors surface as MCP tool errors in the calling client. No public error-code
+    registry or RFC 9457 problem+json envelope is published.
+rate_limits:
+  style: plan-quota
+  detail: >-
+    Metering is per trace, not per request: 100,000 traces/month (Developer),
+    1,000,000 (Growth), 10,000,000 (Enterprise), with overage at $0.0003/trace.
+    No per-request rate-limit headers are documented.
+  source: https://kubit.ai/pricing
+identifiers:
+  detail: >-
+    createReport returns a formulaTemplateId and an analysisId that identify the
+    generated report for later editing, plus a link into the Kubit app.

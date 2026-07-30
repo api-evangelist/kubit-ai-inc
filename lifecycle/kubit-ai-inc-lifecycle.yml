@@ -1,0 +1,45 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.kubit.ai + npm registry release history
+versioning:
+  packages:
+    scheme: semver
+    evidence: >-
+      @kubit-ai/otel 0.1.0 -> 0.7.3 (17 releases), @kubit-ai/agent-plugin 0.0.1 -> 0.1.4,
+      @kubit-ai/sentry 0.3.1 — all pre-1.0.
+  mcp_server:
+    scheme: unversioned-endpoint
+    evidence: >-
+      https://mcp.kubit.ai/mcp is a single unversioned URL; the repository states the
+      server is under active development / beta.
+  platform:
+    scheme: continuous
+    evidence: >-
+      Kubit is a hosted SaaS platform; documentation carries no API version selector
+      and no dated version list.
+maturity: beta
+deprecation_policy:
+  published: false
+  sunset_header: unknown
+  note: >-
+    No deprecation or sunset policy found on kubit.ai or docs.kubit.ai
+    (https://kubit.ai/roadmap returns 404).
+status_page:
+  published: false
+  note: >-
+    No public status page found; status.kubit.ai does not resolve and no status link
+    appears in the site navigation or documentation.
+sla:
+  published: false
+  note: >-
+    No public SLA document. Enterprise plans advertise a dedicated solution architect
+    and Slack Connect support rather than a published uptime commitment.
+support:
+  - channel: community
+    detail: In-app and Discord, included on all plans.
+  - channel: slack-connect
+    detail: Enterprise plan.
+  - channel: csm
+    detail: >-
+      MCP connection, authentication, and tool issues are directed to the customer's
+      Kubit CSM.

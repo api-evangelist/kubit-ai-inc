@@ -1,0 +1,36 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.kubit.ai/docs/embedding-kubit-urls
+summary: >-
+  Kubit's client-side embed surface is URL-based: saved Reports and Dashboards are
+  embedded into other websites and internal portals by URL rather than by a JavaScript
+  element library. Kubit ships no public web-component or React element package.
+families:
+  - name: Embedded analytics
+    kind: url-embed
+    docs: https://docs.kubit.ai/docs/embedding-kubit-urls
+    components:
+      - name: Embedded Report
+        description: Embed a saved Kubit Report in another website.
+      - name: Embedded Dashboard
+        description: Embed a saved Kubit Dashboard in another website.
+  - name: Notebook
+    kind: jupyter-extension
+    docs: https://docs.kubit.ai/docs/jupyter-notebook
+    package: kubit (PyPI)
+    components:
+      - name: Jupyter Server Extension
+        description: >-
+          Retrieves and stores a CSV from a URL into a pandas data frame inside a
+          Jupyter notebook.
+  - name: Export destinations
+    kind: hosted-integration
+    components:
+      - name: Google Drive / Google Slides export
+        docs: https://docs.kubit.ai/docs/download-dashboard-to-google-slides
+      - name: OneDrive export
+        docs: https://docs.kubit.ai/docs/download-reports-to-onedrive
+loader_libraries: []
+note: >-
+  No first-party embeddable JS/web-component library was found on npm; the
+  @kubit-ui-web/* React component packages on npm belong to an unrelated organization.

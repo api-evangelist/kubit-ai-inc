@@ -1,0 +1,57 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/org/kubit-ai + https://pypi.org/project/kubit/
+notes: >-
+  Kubit publishes first-party libraries under the npm scope @kubit-ai (each declares
+  homepage https://www.kubit.ai) and one PyPI distribution authored by "Kubit AI, Inc."
+  The unscoped npm packages named "kubit", "@kubit/*", "create-kubit" belong to the
+  unrelated KubitJS Node.js framework, and "@kubit-ui-web/*" belongs to an unrelated
+  design system; neither is included here.
+packages:
+  - language: javascript
+    registry: npm
+    name: '@kubit-ai/otel'
+    version: 0.7.3
+    url: https://www.npmjs.com/package/@kubit-ai/otel
+    install: npm install @kubit-ai/otel
+    description: OpenTelemetry exporter for Kubit analytics.
+    homepage: https://www.kubit.ai
+    license: proprietary
+    official: true
+  - language: javascript
+    registry: npm
+    name: '@kubit-ai/sentry'
+    version: 0.3.1
+    url: https://www.npmjs.com/package/@kubit-ai/sentry
+    install: npm install @kubit-ai/sentry
+    description: >-
+      Tee Sentry events (errors + transactions) to Kubit as OTLP for behavior analytics.
+    homepage: https://www.kubit.ai
+    license: proprietary
+    official: true
+  - language: javascript
+    registry: npm
+    name: '@kubit-ai/agent-plugin'
+    version: 0.1.4
+    url: https://www.npmjs.com/package/@kubit-ai/agent-plugin
+    install: npx @kubit-ai/agent-plugin
+    bin: kubit-agent-plugin
+    description: >-
+      Kubit LLM-ops skills for Claude Code and Cursor: inspect traces and build
+      analytics reports against the Kubit platform.
+    homepage: https://www.kubit.ai
+    license: proprietary
+    official: true
+  - language: python
+    registry: pypi
+    name: kubit
+    version: 1.7.0
+    url: https://pypi.org/project/kubit/
+    install: pip install kubit
+    description: >-
+      Jupyter Server Extension to retrieve and store a CSV file from a URL in a pandas
+      data frame that can be manipulated in a Jupyter python notebook.
+    author: Kubit AI, Inc.
+    license: MIT
+    official: true
+    related_docs: https://docs.kubit.ai/docs/jupyter-notebook

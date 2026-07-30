@@ -1,0 +1,60 @@
+generated: '2026-07-19'
+method: searched
+source: https://mcp.kubit.ai/.well-known/ + https://docs.kubit.ai/docs/mcp-server
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      RFC 6749 authorization code grant with refresh tokens, advertised at
+      https://mcp.kubit.ai/.well-known/oauth-authorization-server.
+  - id: rfc8414
+    name: OAuth 2.0 Authorization Server Metadata
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server returns 200 application/json.
+  - id: rfc9728
+    name: OAuth 2.0 Protected Resource Metadata
+    conforms: true
+    evidence: /.well-known/oauth-protected-resource returns 200 application/json.
+  - id: rfc7636
+    name: PKCE
+    conforms: true
+    evidence: code_challenge_methods_supported = ["S256"].
+  - id: rfc7591
+    name: OAuth 2.0 Dynamic Client Registration
+    conforms: true
+    evidence: registration_endpoint = https://mcp.kubit.ai/auth/oauth2/register.
+  - id: mcp
+    name: Model Context Protocol
+    conforms: true
+    evidence: >-
+      Hosted MCP server at https://mcp.kubit.ai/mcp over http-stream transport,
+      documented for Cursor, Claude, and Claude Code.
+  - id: oidc
+    conforms: partial
+    evidence: >-
+      SSO is offered against OIDC/SAML identity providers (Google Workspace, Okta,
+      Microsoft Entra ID, AWS IAM Identity Center), but Kubit publishes no
+      /.well-known/openid-configuration of its own.
+  - id: opentelemetry
+    conforms: true
+    evidence: >-
+      First-party OTLP exporter published as @kubit-ai/otel; ingestion of OTel GenAI
+      semantics and Sentry-to-OTLP teeing via @kubit-ai/sentry.
+  - id: saml
+    conforms: true
+    evidence: SSO integration guides at https://docs.kubit.ai/docs/single-sign-on-sso.
+  - id: gdpr
+    conforms: true
+    evidence: >-
+      Published GDPR Compliance Policy (https://kubit.ai/gdpr-compliance-policy/)
+      and GDPR Cookie Policy.
+  - id: rfc9457
+    conforms: false
+    evidence: No public HTTP problem-details surface; Kubit publishes no REST API reference.
+  - id: fhir
+    conforms: false
+    evidence: Not applicable — product analytics, not healthcare.
+  - id: scim
+    conforms: false
+    evidence: >-
+      No SCIM provisioning documented; group sync is handled through SSO LDAP groups.

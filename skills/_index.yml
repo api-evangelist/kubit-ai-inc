@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/@kubit-ai/agent-plugin
+notes: >-
+  Kubit publishes its own Agent Skills. The @kubit-ai/agent-plugin npm package installs
+  seven /kubit-* slash-command skills into Claude Code and Cursor, and bundles a
+  .mcp.json that auto-wires Claude Code to the hosted Kubit MCP server. The skill
+  descriptions below are transcribed verbatim from the package README; the step bodies
+  are our packaging of the documented install and MCP tool contract. No skill invents a
+  tool that is not in mcp/kubit-ai-inc-mcp.yml.
+install: npx @kubit-ai/agent-plugin
+runtimes:
+  - Claude Code
+  - Cursor
+mcp_server: https://mcp.kubit.ai/mcp
+skills:
+  - command: /kubit-connect
+    file: kubit-ai-inc-kubit-connect.md
+    purpose: Authenticate and select the current org / workspace
+  - command: /kubit-help
+    file: kubit-ai-inc-kubit-help.md
+    purpose: List all kubit skills and how to use them
+  - command: /kubit-inspect
+    file: kubit-ai-inc-kubit-inspect.md
+    purpose: Inspect users, sessions, traces, and events
+  - command: /kubit-report
+    file: kubit-ai-inc-kubit-report.md
+    purpose: Find, run, or create analytics reports
+  - command: /kubit-blame
+    file: kubit-ai-inc-kubit-blame.md
+    purpose: >-
+      Find the code change behind a trace regression (downstream of report / inspect)
+  - command: /kubit-integrate
+    file: kubit-ai-inc-kubit-integrate.md
+    purpose: >-
+      Wire your LLM app's tracing into Kubit — detects sinks (Langfuse, Braintrust) and
+      sources (Vercel AI, OTel GenAI, LangChain)
+  - command: /kubit-update
+    file: kubit-ai-inc-kubit-update.md
+    purpose: Check npm for a new version and install it

@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/@kubit-ai/agent-plugin
+name: kubit-agent-plugin
+summary: >-
+  Kubit's only first-party command-line surface is the agent-plugin installer, which
+  installs the /kubit-* skills into Claude Code and/or Cursor and wires the bundled
+  .mcp.json to the hosted Kubit MCP server. Day-to-day work then happens through the
+  slash-command skills and MCP tools rather than through further CLI subcommands.
+install:
+  - method: npx
+    command: npx @kubit-ai/agent-plugin
+    note: Prompts for Claude Code, Cursor, or both.
+  - method: npm
+    command: npm install -g @kubit-ai/agent-plugin
+    binary: kubit-agent-plugin
+flags:
+  - flag: '--global'
+    default: true
+    description: Install user-wide.
+  - flag: '--local'
+    description: Install into the current directory.
+  - flag: '--uninstall'
+    description: Remove the installed skills.
+  - flag: '--yes'
+    description: >-
+      Skip the location prompt. The runtime (Claude Code / Cursor) is always prompted.
+post_install:
+  - Restart the runtime.
+  - Run /kubit-help to list the installed skills.
+version_management:
+  command: /kubit-update
+  description: >-
+    Reads the installed version from <config>/kubit/VERSION, checks npm for a newer
+    release, shows the unseen changelog slice, and re-runs the installer on confirmation.

@@ -1,0 +1,10 @@
+{
+    "authorization_servers": [
+        "https://mcp.kubit.ai/auth/oauth2"
+    ],
+    "resource": "https://mcp.kubit.ai/mcp",
+    "scopes_supported": [
+        "mcp:read",
+        "mcp:write"
+    ]
+}

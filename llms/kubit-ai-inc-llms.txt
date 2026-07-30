@@ -1,0 +1,91 @@
+# Kubit Documentation
+
+> Documentation for Kubit
+
+## Guides
+- [Quick Start Guide](https://docs.kubit.ai/docs/getting-started.md): Welcome to Kubit! Kubit lets you access 360º insights into what keeps customers engaged and loyal, without the limitations of legacy digital analytics solutions.
+- [Five Things to Know About Kubit](https://docs.kubit.ai/docs/five-things-to-know-about-kubit.md): Get started with Kubit's warehouse-native analytics platform—learn how to query cloud data, leverage built-in charts, collaborate on insights, save reusable components, and explore without limits.
+- [Login to Kubit](https://docs.kubit.ai/docs/login-to-kubit.md): Sign in to Kubit using Single Sign-On (SSO) or an invite email with your temporary password, and set up your account with a secure password and multi-factor authentication.
+- [Main Navigation Items Overview](https://docs.kubit.ai/docs/introduction-to-the-main-navigation-items.md): Navigate Kubit's platform structure—access dashboards, create reports, manage cohorts, search content, and configure data models through the left-side navigation menu.
+- [Universal Search](https://docs.kubit.ai/docs/universal-search.md): Quickly locate reports, dashboards, cohorts, and measures using text search and advanced filters by date, schema, report type, editor, or tags to find exactly what you need.
+- [Which Report Should I Use?](https://docs.kubit.ai/docs/which-report-should-i-use.md): Use the **Favorites Star** next to the search bar to quickly access your favorited items. You can also toggle Favorites from the Universal Search menu:
+- [Components of a Report](https://docs.kubit.ai/docs/components-of-a-report.md): Master report building with Subjects, Measures, Filters, Breakdowns, and Cohorts—learn how to create, save, and reuse components to build consistent, powerful analytics across all report types.
+- [Using the Date Picker](https://docs.kubit.ai/docs/using-the-date-picker.md): Configure date ranges and time intervals for reports—understand Live Date settings, select daily to yearly intervals, and customize how data aggregates across Query, Funnel, and Retention analyses.
+- [History](https://docs.kubit.ai/docs/history.md): Easily access and manage your recently executed and draft Reports.
+- [Query](https://docs.kubit.ai/docs/query.md): A comprehensive guide to using the Query chart type in Kubit.
+- [Advanced Query Features](https://docs.kubit.ai/docs/advanced-query-features.md): Explore advanced Query features like Histograms and Impact Analysis to deepen your data insights.
+- [Query Tips and Tricks](https://docs.kubit.ai/docs/query-tips-and-tricks.md): More ways to modify your Query Charts
+- [Funnel](https://docs.kubit.ai/docs/funnel.md): Build powerful Funnel charts to measure conversion rates, identify drop-off points, and optimize multi-step user flows in your product.
+- [Funnel Tips and Tricks](https://docs.kubit.ai/docs/funnel-tips-and-tricks.md): Unlock deeper insights with these funnel-building tips.
+- [Frequency Mode in Funnel](https://docs.kubit.ai/docs/funnel-frequency.md): Analyze user behavior patterns by tracking how many times users perform each step before progressing through your funnel using Frequency Mode.
+- [Time to Convert (TTC) Mode in Funnels](https://docs.kubit.ai/docs/time-to-convert-mode-in-funnel.md): Learn how to use the Time to Convert mode in Kubit Funnels to analyze user conversion times between steps.
+- [Flow](https://docs.kubit.ai/docs/flow.md): Flow maps the sequential journey users take through a product, identifying exactly where they drop off, loop back, or successfully progress toward a specific goal.
+- [Retention](https://docs.kubit.ai/docs/retention.md): Use our Retention report to understand how frequently users return to your product.
+- [Data Table](https://docs.kubit.ai/docs/data-table.md): Build pivot-style reports with saved measures and up to five breakdowns to view aggregated metrics side-by-side and compare data across multiple dimensions.
+- [Significance](https://docs.kubit.ai/docs/significance-report.md): Understand the statistical impact of experiments or segments.
+- [Cohorts](https://docs.kubit.ai/docs/cohorts.md): Create and analyze user cohorts based on behavioral patterns, compare cohort performance, and use them as filters or segments across reports to drive targeted insights.
+- [View SQL Behind Every Report](https://docs.kubit.ai/docs/view-sql-behind-every-report.md): Access and copy the exact SQL queries powering any report in Kubit, leveraging warehouse-native transparency to modify, share, or run queries directly in your own SQL editor.
+- [Sampling Options](https://docs.kubit.ai/docs/sampling-options.md): Optimize query performance by sampling event or subject-level data, enabling faster analysis of large datasets while maintaining statistical accuracy across your reports.
+- [Flexible Queries with Nested Fields](https://docs.kubit.ai/docs/flexible-queries-with-nested-property.md): Working with semi-structured data types using nested fields in Kubit.
+- [Dashboards](https://docs.kubit.ai/docs/creating-dashboards.md): Create interactive dashboards with multiple visualizations, set refresh schedules to monitor key metrics, and share insights across your organization with customizable filters and permissions.
+- [Manage Dashboard Permissions](https://docs.kubit.ai/docs/manage-dashboard-permissions.md): Manage access to your dashboards and collaborate with team members.
+- [Organize Your Dashboards](https://docs.kubit.ai/docs/organize-your-dashboards.md): Learn how to manage dashboard permissions, organization, and publishing.
+- [Viewing Dashboards](https://docs.kubit.ai/docs/viewing-dashboards.md): Kubit Dashboards are powerful tools to share insights. Explore what you can do as a viewer.
+- [Schedule Report and Dashboard Refresh](https://docs.kubit.ai/docs/schedule-refreshes.md): Keep your Dashboards and Reports up-to-date with automated scheduling and anomaly detection.
+- [Google Drive Integration](https://docs.kubit.ai/docs/download-dashboard-to-google-slides.md): Learn how to download Reports from a Dashboard directly into your Google Drive.
+- [OneDrive Integration](https://docs.kubit.ai/docs/download-reports-to-onedrive.md): Learn how to download Reports from a Dashboard directly into your OneDrive
+- [Dashboard and Report Commenting](https://docs.kubit.ai/docs/dashboard-and-report-commenting.md): Add threaded comments to dashboards and individual reports, mention team members for Slack notifications, attach images, and resolve discussions to streamline cross-functional collaboration.
+- [Scratchpad](https://docs.kubit.ai/docs/scratchpad.md): Build lightweight collections of reports, dashboards, cohorts, images, and notes in a flexible canvas to organize insights, document workflows, and share analysis without creating full dashboards.
+- [Integrate Kubit with Slack](https://docs.kubit.ai/docs/integrate-kubit-with-slack.md): Learn how to integrate Kubit with Slack for seamless notifications and alerts.
+- [Personal Notifications](https://docs.kubit.ai/docs/personal-notifications.md): Stay informed about activities in Kubit with Email, Slack, or In-Product notifications.
+- [Lumos AI](https://docs.kubit.ai/docs/lumos-ai.md): Ask questions in plain English to generate reports, create cohorts, and get AI-powered explanations of your data—Lumos translates natural language into queries and delivers secure, transparent analytics.
+- [Lumos AI Settings](https://docs.kubit.ai/docs/lumos-ai-settings.md): Learn how to configure Lumos AI settings in Kubit, including enabling features, setting API keys, and customizing natural language capabilities.
+- [AI Prompting Best Practices](https://docs.kubit.ai/docs/prompt-best-practices.md)
+- [Ask Lumos](https://docs.kubit.ai/docs/ask-lumos.md): Explore Kubit's full screen chat experience powered by Lumos AI, designed for Enterprise customers.
+- [Lumos Report Creation](https://docs.kubit.ai/docs/natural-language-report-creation.md): Build reports in Kubit using natural language and our Lumos AI feature
+- [Lumos Cohort Creation](https://docs.kubit.ai/docs/natural-language-cohort-creation.md): Learn how to build cohorts in Kubit using natural language and our Lumos AI feature.
+- [Explain with Lumos](https://docs.kubit.ai/docs/kubit-explain-with-ai.md): Learn about Kubit's Explain feature powered by AI
+- [MCP Server](https://docs.kubit.ai/docs/mcp-server.md): Seamlessly integrate Kubit's digital insights into your favorite AI tools and workflows. Ask analytics questions directly in Claude, ChatGPT, or Cursor conversations and get the same context-rich answers you would in Kubit.
+- [Lumos AI Readiness & AI Data Dictionary](https://docs.kubit.ai/docs/lumos-ai-readiness.md)
+- [Lumos Agentic AI Chat](https://docs.kubit.ai/docs/lumos-agentic-ai-chat-experience.md): Kubit Agentic Chat is our new AI-powered conversational analytics experience.
+- [Integration Guide](https://docs.kubit.ai/docs/integration-guide.md): Best practices and process for no-ETL integration
+- [Setup a Data Share](https://docs.kubit.ai/docs/secure-data-sharing.md): Secure Data Sharing
+- [Snowflake](https://docs.kubit.ai/docs/snowflake.md): Power Kubit with Secure Data Sharing
+- [Databricks ](https://docs.kubit.ai/docs/databricks.md): Power Kubit with Delta Sharing
+- [BigQuery](https://docs.kubit.ai/docs/bigquery.md): Share Dataset(s) with Kubit
+- [Presto](https://docs.kubit.ai/docs/presto.md): Integrate via Data Share
+- [Direct Connect to Your Cloud Data Warehouse](https://docs.kubit.ai/docs/data-warehouse.md): Learn how Kubit connects directly to major data warehouses for real-time data access and insights.
+- [Snowflake](https://docs.kubit.ai/docs/snowflake-direct.md): Integrate via Direct Connect
+- [BigQuery](https://docs.kubit.ai/docs/bigquery-direct.md): Integrate via Direct Connect
+- [Databricks](https://docs.kubit.ai/docs/databricks-direct.md): Integrate via Direct Connect
+- [ClickHouse](https://docs.kubit.ai/docs/clickhouse-direct.md): Integrate via Direct Connect
+- [Redshift](https://docs.kubit.ai/docs/redshift-direct.md): Integrate via Direct Connect with Amazon Redshift
+- [IP Whitelist](https://docs.kubit.ai/docs/kubit-ip-addresses.md): Kubit IP Ranges and Whitelisting Instructions
+- [Integrate with your Customer Data Platform (CDP)](https://docs.kubit.ai/docs/customer-data-platforms.md): Learn how to integrate Kubit with leading Customer Data Platforms to enhance user behavior analysis.
+- [Segment](https://docs.kubit.ai/docs/segment.md): Receive events from Segment
+- [Snowplow](https://docs.kubit.ai/docs/snowplow.md): Receive events from Snowplow
+- [mParticle](https://docs.kubit.ai/docs/mparticle.md): Receive events from mParticle
+- [RudderStack](https://docs.kubit.ai/docs/rudderstack.md): Receive events from RudderStack
+- [Integrate with your MarTech Platform](https://docs.kubit.ai/docs/third-party-martech.md): Learn how to activate customer behavioral data and integrate with MarTech platforms using Kubit.
+- [Braze](https://docs.kubit.ai/docs/braze.md): Guide to integrating Kubit with Braze for enhanced user engagement and analytics.
+- [Data Replication via AWS S3](https://docs.kubit.ai/docs/s3.md): Integration via AWS S3
+- [Introduction to Data Modeler](https://docs.kubit.ai/docs/introduction-to-data-modeler.md): Configure data warehouse connections, map tables and fields, create derived columns, and manage schemas to enable self-service analytics and empower data-driven teams across your Kubit environment.
+- [AI Functions in Derived Fields](https://docs.kubit.ai/docs/ai-functions.md): Leverage warehouse-native AI functions from Snowflake, BigQuery, and Databricks to analyze unstructured text data like customer reviews and product descriptions directly within your Kubit derived fields.
+- [Dictionary](https://docs.kubit.ai/docs/dictionary.md): View and manage all warehouse data, events, fields, and catalog items—add descriptions, apply tags, create managed views, and organize your analytics data for easy discovery across reports.
+- [Virtual Events](https://docs.kubit.ai/docs/virtual-events.md): Combine multiple events or apply custom filters to create reusable virtual events, save complex event logic for consistent analysis, and streamline reporting across your organization.
+- [Incidents](https://docs.kubit.ai/docs/incidents.md): Place additional context alongside your reports with Incidents in Kubit.
+- [Jupyter Notebook](https://docs.kubit.ai/docs/jupyter-notebook.md): Install and use Jupyter Notebook
+- [Embedding Kubit](https://docs.kubit.ai/docs/embedding-kubit-urls.md): Embed Kubit Reports and Dashboards in other websites
+- [Users](https://docs.kubit.ai/docs/admin-panel-users.md): Manage user access and permissions—invite new users, assign groups and roles, view login activity, and disable or re-enable accounts to control who can access your Kubit environment.
+- [Roles](https://docs.kubit.ai/docs/admin-panel-roles.md): Manage user permissions with built-in Admin, Governor, Creator, and Viewer roles, create custom roles with granular permissions, and assign schema-specific access to control what users can view and build.
+- [Groups](https://docs.kubit.ai/docs/admin-panel-groups.md): Create and manage user groups to assign role-based permissions at scale, sync with SSO LDAP groups, and organize teams by department or responsibility for streamlined access control.
+- [User Roles and Permissions](https://docs.kubit.ai/docs/kubit-user-roles-and-permissions.md): Here is a summary of our standard roles and permissions
+- [Single Sign-On (SSO)](https://docs.kubit.ai/docs/single-sign-on-sso.md): SSO integration guides
+- [Google Workspace](https://docs.kubit.ai/docs/google-workspace.md): Set up SSO with Google Workspace
+- [Okta](https://docs.kubit.ai/docs/okta.md): Set up SSO with Okta
+- [Azure Microsoft Entra ID (Active Directory)](https://docs.kubit.ai/docs/azure-active-directory-ad.md): Set up SSO with Azure
+- [AWS IAM Identity Center](https://docs.kubit.ai/docs/aws-iam-identity-center.md): Setup SSO AWS
+- [Supported Browsers](https://docs.kubit.ai/docs/supported-browsers.md)
+- [Plan Details](https://docs.kubit.ai/docs/admin-plan-summary.md): Access your plan and billing information, and monitor your Monthly Active Users (MAU) consumption.
+- [Admin Notifications](https://docs.kubit.ai/docs/admin-notifications.md): Get notified of certain activities in Kubit with detailed configuration options.
+- [Dark Mode](https://docs.kubit.ai/docs/dark-mode.md): Kubit supports Dark mode, allowing users to select the mode that best suits their requirements.

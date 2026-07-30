@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: https://security.kubit.ai/
+trust_center:
+  url: https://security.kubit.ai/
+  platform: vanta
+  title: Kubit Trust Center
+  description: >-
+    Welcome to Kubit's Security Portal. We understand security compliance is one of the
+    most essential aspects of our business. We have a strong commitment to security in
+    every aspect of our operation - design, implementation, deployment, and monitoring.
+    Use this portal to learn about our security posture and request access to our
+    security documentation.
+  document_access: request
+certifications:
+  enumerated: false
+  note: >-
+    The trust center is a client-rendered Vanta trust report and gates its document list
+    behind an access request, so no specific certification (SOC 2 / ISO 27001 / PCI /
+    HIPAA / FedRAMP) could be verified from the public page. Nothing is asserted here
+    that was not observed.
+published_compliance_pages:
+  - name: GDPR Compliance Policy
+    url: https://kubit.ai/gdpr-compliance-policy/
+    status: 200
+  - name: GDPR Cookie Policy
+    url: https://kubit.ai/gdpr-cookie-policy/
+    status: 200
+  - name: Privacy Policy
+    url: https://kubit.ai/privacy-policy/
+    status: 200

@@ -1,0 +1,61 @@
+generated: '2026-07-19'
+method: derived
+source: npm registry release timestamps for the @kubit-ai scope
+docs: https://www.npmjs.com/org/kubit-ai
+notes: >-
+  Kubit publishes no dated changelog page on kubit.ai or docs.kubit.ai (both
+  /changelog and /docs/whats-new return 404). The record below is the real dated
+  release history of the first-party npm packages, read from the registry — it is a
+  package release timeline, not a platform changelog. The @kubit-ai/agent-plugin
+  README notes the /kubit-update skill "shows the changelog slice you haven't seen
+  yet", implying a changelog shipped inside the package rather than published on the web.
+scheme: semver
+platform_changelog_published: false
+current_versions:
+  '@kubit-ai/otel': 0.7.3
+  '@kubit-ai/sentry': 0.3.1
+  '@kubit-ai/agent-plugin': 0.1.4
+entries:
+  - package: '@kubit-ai/sentry'
+    version: 0.3.1
+    date: '2026-07-16'
+    breaking: false
+  - package: '@kubit-ai/otel'
+    version: 0.7.3
+    date: '2026-05-18'
+    breaking: false
+  - package: '@kubit-ai/agent-plugin'
+    version: 0.1.4
+    date: '2026-05-28'
+    breaking: false
+  - package: '@kubit-ai/agent-plugin'
+    version: 0.1.4-rc.1
+    date: '2026-05-27'
+    breaking: false
+    prerelease: true
+  - package: '@kubit-ai/agent-plugin'
+    version: 0.1.3
+    date: '2026-05-11'
+    breaking: false
+  - package: '@kubit-ai/agent-plugin'
+    version: 0.1.2
+    date: '2026-05-08'
+    breaking: false
+  - package: '@kubit-ai/agent-plugin'
+    version: 0.1.1
+    date: '2026-05-06'
+    breaking: false
+  - package: '@kubit-ai/agent-plugin'
+    version: 0.1.0
+    date: '2026-04-30'
+    breaking: false
+  - package: '@kubit-ai/agent-plugin'
+    version: 0.0.1
+    date: '2026-04-17'
+    breaking: false
+    highlights: First public release of the Kubit agent plugin.
+  - package: '@kubit-ai/otel'
+    version: 0.1.0
+    date: '2026-04-14'
+    breaking: false
+    highlights: First public release of the Kubit OpenTelemetry exporter.
