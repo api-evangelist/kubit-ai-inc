@@ -76,6 +76,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: IssueTracker
+  url: https://github.com/Kubit-AI/mcp-server/issues
 - type: Website
   url: https://www.kubit.ai/
 - type: DeveloperPortal
