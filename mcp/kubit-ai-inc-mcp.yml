@@ -17,43 +17,38 @@ authentication:
   authorization_endpoint: https://mcp.kubit.ai/auth/oauth2/authorize
   token_endpoint: https://mcp.kubit.ai/auth/oauth2/token
   scopes:
-    - mcp:read
-    - mcp:write
-  tenancy: >-
-    The client is prompted for an organization name at connect time; permissions are
-    enforced through Kubit's existing role-based access controls.
+  - mcp:read
+  - mcp:write
+  tenancy: The client is prompted for an organization name at connect time; permissions are enforced through
+    Kubit's existing role-based access controls.
 clients_documented:
-  - name: Cursor
-    steps: Settings -> Tools & MCP -> Add a Custom MCP Server
-  - name: Claude
-    steps: Settings -> Connectors -> Add custom connector
-  - name: Claude Code
-    note: >-
-      The @kubit-ai/agent-plugin npm package bundles a .mcp.json that auto-wires
-      Claude Code to this server.
+- name: Cursor
+  steps: Settings -> Tools & MCP -> Add a Custom MCP Server
+- name: Claude
+  steps: Settings -> Connectors -> Add custom connector
+- name: Claude Code
+  note: The @kubit-ai/agent-plugin npm package bundles a .mcp.json that auto-wires Claude Code to this
+    server.
 tools:
-  - name: getUserContext
-    description: >-
-      Always the first call. Retrieves user context, available schemas, and the active
-      schema selection.
-  - name: getSchema
-    description: >-
-      Retrieves full metadata for a specific schema, including event definitions,
-      properties, and dimensions.
-  - name: createReport
-    description: >-
-      Generates analytical queries and returns a summary of results, a link to the full
-      report in the Kubit app, and a formulaTemplateId plus analysisId for further editing.
-  - name: getRawData
-    description: Exports CSV-like raw output from an existing report.
-  - name: searchKubit
-    description: Searches for reports or dashboards across your organization.
-config_example: |
-  {
-    "mcpServers": {
-      "KubitMCP": {
-        "url": "https://mcp.kubit.ai/mcp",
-        "transport": "http-stream"
-      }
-    }
-  }
+- name: getUserContext
+  description: Always the first call. Retrieves user context, available schemas, and the active schema
+    selection.
+- name: getSchema
+  description: Retrieves full metadata for a specific schema, including event definitions, properties,
+    and dimensions.
+- name: createReport
+  description: Generates analytical queries and returns a summary of results, a link to the full report
+    in the Kubit app, and a formulaTemplateId plus analysisId for further editing.
+- name: getRawData
+  description: Exports CSV-like raw output from an existing report.
+- name: searchKubit
+  description: Searches for reports or dashboards across your organization.
+config_example: "{\n  \"mcpServers\": {\n    \"KubitMCP\": {\n      \"url\": \"https://mcp.kubit.ai/mcp\"\
+  ,\n      \"transport\": \"http-stream\"\n    }\n  }\n}\n"
+deployment:
+  mode: remote
+  endpoint: https://mcp.kubit.ai/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
