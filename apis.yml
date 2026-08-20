@@ -39,6 +39,16 @@ tags:
 - Product Analytics
 - Data Warehouse
 - LLM Observability
+- MCP
+- Agent Analytics
+- OpenTelemetry
+- DevOps
+tags_raw:
+- Company
+- Analytics
+- Product Analytics
+- Data Warehouse
+- LLM Observability
 - Model Context Protocol
 - Agent Analytics
 - OpenTelemetry
@@ -56,6 +66,10 @@ apis:
   humanURL: https://docs.kubit.ai/docs/mcp-server
   baseURL: https://mcp.kubit.ai/mcp
   tags:
+  - MCP
+  - Analytics
+  - Agent Analytics
+  tags_raw:
   - Model Context Protocol
   - Analytics
   - Agent Analytics
