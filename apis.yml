@@ -10,6 +10,18 @@ description: >-
   surface is a hosted Model Context Protocol server at mcp.kubit.ai, protected by OAuth
   2.1 with PKCE, plus first-party OpenTelemetry exporters and a set of published agent
   skills for Claude Code and Cursor. Kubit is backed by Insight Partners.
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
