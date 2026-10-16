@@ -62,7 +62,7 @@ edges:
     registered_name: ai.kubit/mcp-server
     register_id: ai.kubit/mcp-server
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-14'
+    detected: '2026-10-15'
   mcp_registry:
     servers:
     - ai.kubit/mcp-server
