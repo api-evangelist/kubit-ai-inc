@@ -95,10 +95,65 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Slack app
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/@kubit-ai/agent-plugin
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@kubit-ai/agent-plugin'
+      version: 0.1.6
+      released: '2026-08-20'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@kubit-ai/agent-plugin
+      repo_leg: domain:kubit.ai
+      publisher_leg: org:kubit-ai
+      matched_by: domain
+    - name: '@kubit-ai/otel'
+      version: 0.7.3
+      released: '2026-07-02'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@kubit-ai/otel
+      repo_leg: domain:kubit.ai
+      publisher_leg: org:kubit-ai
+      matched_by: domain
+    - name: '@kubit-ai/sentry'
+      version: 0.3.3
+      released: '2026-07-31'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@kubit-ai/sentry
+      repo_leg: domain:kubit.ai
+      publisher_leg: org:kubit-ai
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 method: searched
 checked:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
 - https://docs.mparticle.com/integrations/kubit/event/
+- https://proxy.golang.org
+- https://pypi.org/pypi
 - https://registry.modelcontextprotocol.io/v0/servers
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/kubit
 - slack/integrations/slack-integration-edges.yml
 source:
