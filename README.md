@@ -1,4 +1,4 @@
-# Kubit AI, Inc.
+# Kubit AI
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,109 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kubit AI, Inc. is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. Sector: devops. This profile is a lead awaiting the enrichment pipeline.
+Kubit is a warehouse-native digital analytics platform that runs product analytics directly against a customer's cloud data warehouse with no ETL, and bridges that behavioral data with LLM observability. Kubit maps clickstream behavior, intent, and sentiment onto LLM traces so teams building AI agents can debug and optimize them where they already work. Its semantic layer applies business definitions, data models, and governance policies before any query reaches the warehouse. Kubit's programmatic surface is a hosted Model Context Protocol server at mcp.kubit.ai, protected by OAuth 2.1 with PKCE, plus first-party OpenTelemetry exporters and a set of published agent skills for Claude Code and Cursor. Kubit is backed by Insight Partners.
 
-Backed by: insight-partners — https://www.kubit.ai/
+**Areas:** Company · Analytics · Product Analytics · Data Warehouse · LLM Observability · MCP · Agent Analytics · OpenTelemetry · DevOps
+
+## Kubit AI on APIs.io
+
+Everything profiled for Kubit AI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kubit-ai-inc/](https://apis.io/providers/kubit-ai-inc/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Kubit MCP Server](https://apis.io/apis/kubit-ai-inc/mcp/) — Kubit's hosted Model Context Protocol server. Exposes five tools — getUserContext, getSchema, createReport, getRawData, and searchKubit — that let an…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [KubitMCP](https://apis.io/servers/kubit-ai-inc/kubitmcp/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Kubit Ai Inc Authentication](https://apis.io/security/kubit-ai-inc/kubit-ai-inc-authentication/)
+- [Kubit Ai Inc Domain Security](https://apis.io/security/kubit-ai-inc/kubit-ai-inc-domain-security/)
+- [Kubit Ai Inc Trust Center](https://apis.io/security/kubit-ai-inc/kubit-ai-inc-trust-center/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Kubit Ai Inc Scopes](https://apis.io/scopes/kubit-ai-inc/kubit-ai-inc-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.kubit.ai/)
+- [Documentation](https://docs.kubit.ai/docs/getting-started)
+- [Getting started](https://docs.kubit.ai/docs/getting-started)
+- [Pricing](https://kubit.ai/pricing)
+- [Sign up](https://agent.kubit.ai/)
+- [Support](https://kubit.ai/about/#contact-block)
+- [Blog](https://kubit.ai/company/blog)
+- [Compliance](https://kubit.ai/gdpr-compliance-policy/)
+- [Terms of service](https://kubit.ai/terms-of-service/)
+- [Privacy policy](https://kubit.ai/privacy-policy/)
+- [GitHub](https://github.com/Kubit-AI)
+
+## API Evangelist rating
+
+**Kin Score 37.7** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 56.0 |
+| Access clarity | 53.9 |
+
+**Agent readiness 30.9** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 39.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/kubit-ai-inc/](https://apis.io/providers/kubit-ai-inc/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kubit AI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kubit-ai-inc/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
